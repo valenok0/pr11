@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить информацию о найденном животном</title>
+    <link rel="stylesheet" href="css/add.css">
+    <link rel="icon" href="img/logo.png">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="Логотип"></a>
+            </div>
+            <h1>Новая жизнь</h1>
+            <nav>
+                <ul>
+                    <li><a href="register.html">Регистрация</a></li>
+                    <li><a href="login.html">Войти</a></li>
+                    <li><a href="add.html">Добавить объявление</a></li>
+                    <li><a href="profile.html">Личный кабинет</a></li>
+                    <li><a href="search.html">Поиск</a></li>
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+  
+    <div class="form-container">
+        <h2>Добавить объявление о найденном животном</h2>
+        <form action="/add" method="POST">
+            <label for="phone">Контактный телефон:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="animal-type">Вид животного:</label>
+            <input type="text" id="animal-type" name="animal-type" required>
+
+            <label for="photo">Фото:</label>
+            <input type="file" id="photo" name="photo" multiple accept="image/*">
+
+            <label for="description">Описание обстоятельств:</label>
+            <textarea id="description" name="description"></textarea>
+
+            <label for="area">Район:</label>
+            <input type="text" id="area" name="area" required>
+
+            <label for="date-found">Дата когда найдено:</label>
+            <input type="date" id="date-found" name="date-found" required>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="agreement" name="agreement" required>
+                <label for="agreement">Согласие на обработку персональных данных</label>
+            </div>
+
+            <button type="submit">Добавить объявление</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>Контакты: 8(800) 123-45-67 | mail@newlife.ru</p>
+    </footer>
+</body>
+</html>

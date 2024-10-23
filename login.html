@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в личный кабинет</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" href="img/logo.png">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="Логотип"></a>
+            </div>
+            <h1>Новая жизнь</h1>
+            <nav>
+                <ul>
+                    <li><a href="register.html">Регистрация</a></li>
+                    <li><a href="login.html">Войти</a></li>
+                    <li><a href="add.html">Добавить объявление</a></li>
+                    <li><a href="profile.html">Личный кабинет</a></li>
+                    <li><a href="search.html">Поиск</a></li>
+                </ul>
+            </nav>
+            
+        </div>
+    </header> 
+
+    <section class="login-section">
+        <h2>Вход в личный кабинет</h2>
+        <form action="/login" method="POST" class="login-form">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+
+            <div class="buttons">
+                <button type="button">Восстановить пароль</button>
+                <button type="submit">Войти</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>Контакты: 8(800) 123-45-67 | mail@newlife.ru</p>
+    </footer>
+</body>
+</html>

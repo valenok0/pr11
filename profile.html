@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет модератора</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <link rel="icon" href="img/logo.png">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="Логотип"></a>
+            </div>
+            <h1>Кабинет модератора</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="logout.html">Выйти</a></li>
+                    <li><a href="search.html">Поиск</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="moderator-panel">
+        <h2>Объявления пользователей</h2>
+
+        
+        <div class="sorting-controls">
+            <label for="sort-date">Сортировать по дате:</label>
+            <select id="sort-date">
+                <option value="newest">От новых к старым</option>
+                <option value="oldest">От старых к новым</option>
+            </select>
+
+            <label for="sort-status">Сортировать по статусу:</label>
+            <select id="sort-status">
+                <option value="moderation">На модерации</option>
+                <option value="active">Активные</option>
+                <option value="found">Найденные</option>
+                <option value="archive">Архив</option>
+            </select>
+        </div>
+
+        
+        <div class="ads-list">
+            <div class="ad-card">
+                <img src="img/1c.jpg" alt="Кот найден">
+                <div class="ad-details">
+                    <p><strong>Животное:</strong> Кот</p>
+                    <p><strong>Местоположение:</strong> ул. Ленина</p>
+                    <p><strong>Дата:</strong> 20.10.2024</p>
+                    <p><strong>Описание:</strong> Найден рыжий кот, похож на домашнего.</p>
+                    <p><strong>Статус:</strong> На модерации</p>
+                </div>
+                
+                <div class="ad-actions">
+                    <label for="status-1">Изменить статус:</label>
+                    <select id="status-1" class="status-select">
+                        <option value="moderation" selected>На модерации</option>
+                        <option value="active">Активно</option>
+                        <option value="found">Найдено</option>
+                        <option value="archive">В архиве</option>
+                    </select>
+                    <button class="save-status">Сохранить</button>
+                </div>
+            </div>
+
+            
+            <div class="ad-card">
+                <img src="img/2d.jpg" alt="Собака найдена">
+                <div class="ad-details">
+                    <p><strong>Животное:</strong> Собака</p>
+                    <p><strong>Местоположение:</strong> ул. Павлова</p>
+                    <p><strong>Дата:</strong> 19.10.2024</p>
+                    <p><strong>Описание:</strong> Найдена небольшая собака, носит ошейник.</p>
+                    <p><strong>Статус:</strong> На модерации</p>
+                </div>
+                <div class="ad-actions">
+                    <label for="status-2">Изменить статус:</label>
+                    <select id="status-2" class="status-select">
+                        <option value="moderation" selected>На модерации</option>
+                        <option value="active">Активно</option>
+                        <option value="found">Найдено</option>
+                        <option value="archive">В архиве</option>
+                    </select>
+                    <button class="save-status">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Контакты: 8 (800) 123-45-67 | mail@newlife.ru</p>
+    </footer>
+<script>
+    document.querySelectorAll('.save-status').forEach(button => {
+    button.addEventListener('click', function () {
+        const statusSelect = this.previousElementSibling;
+        const newStatus = statusSelect.value;
+        alert(`Статус изменён на: ${newStatus}`);
+        
+    });
+});
+
+
+document.getElementById('sort-date').addEventListener('change', function () {
+    const sortOrder = this.value;
+    alert(`Сортировать по дате: ${sortOrder}`);
+    
+});
+
+</script>
+</body>
+</html>
